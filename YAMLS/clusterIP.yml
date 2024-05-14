@@ -1,5 +1,7 @@
-﻿apiVersion: v1
-kind: Pod
+﻿## Esse cluster serve para requisições feitas dentro do mesmo cluster, sem
+## expor a internet
+apiVersion: v1
+kind: Service
 metadata: 
     name: clusterip-service
 spec:

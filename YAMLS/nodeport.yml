@@ -1,0 +1,14 @@
+﻿## Esse cluster serve para testes, não é utilizado em PRD, permite requisições externas ao POD
+## Expor POCs
+apiVersion: v1
+kind: Service
+metadata: 
+    name: nodeport-service
+spec:
+    selector:
+     app: fiapapipod
+    ports:
+      - protocol: TCP
+        port: 80
+        targetPort: 80
+    type: NodePort
