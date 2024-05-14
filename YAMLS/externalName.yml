@@ -1,0 +1,9 @@
+﻿##Não muito utilizado, é necessário quando serviços do pod precisam utilizar recursos de fora do POD como
+## um banco de dados por exemplo
+apiVersion: v1
+kind: Service
+metadata: 
+    name: externalname-service
+spec:
+    type: ExternalName
+    externalName: example.com
